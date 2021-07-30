@@ -1,0 +1,47 @@
+Paint Color
+Customer should be able to choose one of the following paint colors.You set the price for each one.
+
+    Silver
+Midnight Blue
+Firebrick Red
+Spring Green
+
+const databse = {
+    paintColors: [
+        { id: 1, name: "silver", price: 300 },
+        { id: 2, name: "midnight blue", price: 400 },
+        { id: 3, name: "firebrick red", price: 600 },
+        { id: 1, name: "spring green", price: 200 }
+    ],
+
+    interiors: [
+        { id: 1, name: "beige fabric", price: 400 },
+        { id: 2, name: "charcoal fabric", price: 300 },
+        { id: 3, name: "white leather", price: 1100 },
+        { id: 1, name: "black leather", price: 1600 }
+    ],
+
+    technologyPackages: [
+        { id: 1, name: "basic package", price: 2000 },
+        { id: 2, name: "navigation package", price: 3100 },
+        { id: 3, name: "visibility package", price: 4000.99 },
+        { id: 1, name: "ultra package", price: 6525.75 }
+    ],
+
+    wheelChoices: [
+        { id: 1, name: "17-inch pair radial", price: 2515.99 },
+        { id: 2, name: "17-inch pair radial black", price: 2700 },
+        { id: 3, name: "18-inch spoke pair silver", price: 3200 },
+        { id: 1, name: "18-inch spoke pair black", price: 4150.75 }
+    ],
+
+    customOrders: [
+        {
+            id: 1,
+            paintColorsId: ,
+            interiorsId: ,
+            technologyPackagesId: ,
+            wheelChoicesId: 
+        }
+    ]
+}
