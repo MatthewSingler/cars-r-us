@@ -34,13 +34,19 @@ const database = {
             paintColorsId: ,
             interiorsId: ,
             technologyPackagesId: ,
-            wheelChoicesId: 
+            wheelOptionsId: 
+        }
+    ],
+
+    orderBuilder: [
+        {
+
         }
     ]
 }
 
-export const getWheelChoices = () => {
-    return database.wheelChoices.map(wheel => ({ ...wheel }))
+export const getWheelOptions = () => {
+    return database.wheelOptions.map(wheel => ({ ...wheel }))
 }
 
 export const getTechnologyPackages = () => {
@@ -57,4 +63,20 @@ export const getPaintColors = () => {
 
 export const getOrders = () => {
     return database.customOrders.map(order => ({ ...order }))
+}
+
+export const setInterior = (id) => {
+    database.orderBuilder.interiorsId = id
+}
+
+export const setWheels = (id) => {
+    database.orderBuilder.wheelOptionsId = id
+}
+
+export const setPaint = (id) => {
+    database.orderBuilder.paintColorsId = id
+}
+
+export const setTechnology = (id) => {
+    database.orderBuilder.technologyPackagesId = id
 }
