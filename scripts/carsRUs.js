@@ -1,9 +1,19 @@
+import { PaintColors } from "./PaintColors.js"
+import { InteriorOptions } from "./InteriorOptions.js"
+import { TechnologyPackages } from "./TechnologyPackages.js"
+import { WheelOptions } from "WheelOptions.js"
+
+
+
+
+
+
 export const carsRUs = () => {
     return `
         <h1>Cars R Us</h1>
 
         <article class="choices">
-            <section class="choices__ paint options">
+            <section class="choices__ paint colors">
                 <h2>Paint Colors</h2>
                 ${Paints()}
             </section>
@@ -28,7 +38,7 @@ export const carsRUs = () => {
         <article class="customOrders">
             <h2>Custom Vehicle Orders</h2>
             <section class="order__button">
-                <h2>Styles</h2>
+                <h2>Orders</h2>
                 ${Orders()}
             </section>
         </article>
