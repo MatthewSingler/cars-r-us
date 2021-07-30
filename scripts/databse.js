@@ -1,12 +1,5 @@
-Paint Color
-Customer should be able to choose one of the following paint colors.You set the price for each one.
 
-    Silver
-Midnight Blue
-Firebrick Red
-Spring Green
-
-const databse = {
+const database = {
     paintColors: [
         { id: 1, name: "silver", price: 300 },
         { id: 2, name: "midnight blue", price: 400 },
@@ -44,4 +37,24 @@ const databse = {
             wheelChoicesId: 
         }
     ]
+}
+
+export const getWheelChoices = () => {
+    return database.wheelChoices.map(wheel => ({ ...wheel }))
+}
+
+export const getTechnologyPackages = () => {
+    return database.technologyPackages.map(tech => ({ ...tech }))
+}
+
+export const getInteriors = () => {
+    return database.interiors.map(interior => ({ ...interior }))
+}
+
+export const getPaintColors = () => {
+    return database.paintColors.map(color => ({ ...color }))
+}
+
+export const getOrders = () => {
+    return database.customOrders.map(order => ({ ...order }))
 }
