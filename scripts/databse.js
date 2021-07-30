@@ -21,7 +21,7 @@ const database = {
         { id: 1, name: "ultra package", price: 6525.75 }
     ],
 
-    wheelChoices: [
+    wheelOptions: [
         { id: 1, name: "17-inch pair radial", price: 2515.99 },
         { id: 2, name: "17-inch pair radial black", price: 2700 },
         { id: 3, name: "18-inch spoke pair silver", price: 3200 },
