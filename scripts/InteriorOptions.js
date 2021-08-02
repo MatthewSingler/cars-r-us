@@ -1,24 +1,24 @@
-import { getInteriors, setInterior } from "./databse.js"
+import { getInteriors, setInteriors } from "./database.js"
 
 const interiors = getInteriors()
 
 document.addEventListener(
     "change",
     (event) => {
-        if (event.target.name === "interior") {
-            setInterior(parseInt(event.target.value))
-            window.alert(`User chose interior ${event.target.value}`)
+        if (event.target.id === "interior") {
+            setInteriors(parseInt(event.target.value))
+            window.alert(`User chose interior ${event.target.name}`)
         }
     }
 )
 
-export const InteriorOptions = () => {
+export const Interiors = () => {
     let html = "<ul>"
 
     const listInteriorsArray = interiors.map(
         (interior) => {
             return `<li>
-            input type = "radio" name = "interior" value = "${interior.id}" />
+           <input type = "radio" name = "interior" value = "${interior.id}" />
                 </li>`
         }
     )
