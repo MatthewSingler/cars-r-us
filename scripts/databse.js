@@ -28,7 +28,7 @@ const database = {
         { id: 1, name: "18-inch spoke pair black", price: 4150.75 }
     ],
 
-    customOrders: [
+    /*customOrders: [
         {
             id: 1,
             paintColorsId: ,
@@ -36,7 +36,7 @@ const database = {
             technologyPackagesId: ,
             wheelOptionsId: 
         }
-    ],
+    ],*/
 
     orderBuilder: [
         {

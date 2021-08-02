@@ -1,4 +1,4 @@
-import { getInteriors, setInterior } from "database.js"
+import { getInteriors, setInterior } from "./databse.js"
 
 const interiors = getInteriors()
 
@@ -17,8 +17,13 @@ export const InteriorOptions = () => {
 
     const listInteriorsArray = interiors.map(
         (interior) => {
-            return `<li>`
-            input type="radio" name=
+            return `<li>
+            input type = "radio" name = "interior" value = "${interior.id}" />
+                </li>`
         }
     )
+    html += listInteriorsArray.join("")
+    
+    html += "</ul>"
+    return html
 }
