@@ -5,7 +5,7 @@ const colors = getPaintColors()
 document.addEventListener(
     "change",
     (event) => {
-        if (event.target.name === "paint") {
+        if (event.target.name === "color") {
             setPaintColors(parseInt(event.target.value))
             window.alert(`User chose paint color ${event.target.value}`)
         }
@@ -18,7 +18,7 @@ export const PaintColors = () => {
     const listPaintColorsArray = colors.map(
         (color) => {
             return `<li>
-            <input type = "radio" name = "paint" value = "${color.id}" />
+            <input type = "radio" name = "color" value = "${color.id}" />
                 </li>`
         }
     )

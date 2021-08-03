@@ -5,9 +5,15 @@ const interiors = getInteriors()
 document.addEventListener(
     "change",
     (event) => {
-        if (event.target.id === "interior") {
+        if (event.target.name === "interior") {
             setInteriors(parseInt(event.target.value))
-            window.alert(`User chose interior ${event.target.name}`)
+            window.alert(`User chose interior ${event.target.value}`)
+        }
+        for (const interior of interiors) {
+            if (interior.id === interiorId) {
+                return interior.name
+            }
+            
         }
     }
 )

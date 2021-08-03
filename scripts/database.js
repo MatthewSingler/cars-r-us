@@ -50,7 +50,7 @@ export const getWheelOptions = () => {
 }
 
 export const getTechnologyPackages = () => {
-    return database.technologyPackages.map(technology => ({ ...technology }))
+    return database.technologyPackages.map(techPackages => ({ ...techPackages }))
 }
 
 export const getInteriors = () => {
