@@ -2,7 +2,7 @@ import { PaintColors } from "./PaintColors.js"
 import { Interiors } from "./InteriorOptions.js"
 import { TechnologyPackages } from "./TechnologyPackages.js"
 import { WheelOptions } from "./WheelOptions.js"
-import { Orders } from "./orders.js"
+/*import { Orders } from "./orders.js"*/
 
 
 
@@ -39,7 +39,7 @@ export const carsRUs = () => {
             <h2>Custom Vehicle Orders</h2>
             <section class="order__button">
                 <h2>Orders</h2>
-                ${Orders()}
+           
             </section>
         </article>
     `
