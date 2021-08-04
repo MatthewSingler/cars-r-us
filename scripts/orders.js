@@ -1,12 +1,12 @@
-/*import { getOrders, getInteriors, getWheelOptions, getTechnologyPackages, getPaintColors } from "./database.js"
-import { PaintColors } from "./PaintColors.js"
+import { getOrders, getInteriors, getWheelOptions, getTechnologyPackages, getPaintColors } from "./database.js"
+
 
 const buildOrderListItem = (orderObject) => {
 
     const interiors = getInteriors()
     const wheels = getWheelOptions()
-    const  = getTechnologyPackages
-    const colors = getPaintColors
+    const techPackages = getTechnologyPackages()
+    const colors = getPaintColors()
     
     
     const foundInterior = interiors.find(
@@ -46,16 +46,12 @@ const buildOrderListItem = (orderObject) => {
 
 export const Orders = () => {
 
-    /*
-    Can you explain why the state variable has to be inside
-    the component function for Orders, but not the others?
-    */
-    /*const orders = getOrders()*/
+    const orders = getOrders()
 
 
 
 
-/*
+
     let html = "<ul>"
 
     const listItems = orders.map(orderObj => buildOrderListItem(orderObj))
@@ -66,4 +62,3 @@ export const Orders = () => {
 
     return html
 }
-*/
