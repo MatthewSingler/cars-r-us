@@ -82,20 +82,20 @@ export const setTechnologyPackages = (id) => {
 }
 
 export const addCustomOrder = () => {
-    // Copy the current state of user choices
+    //this copies the current user choices and stores it in the newOrder variable.
     const newOrder = { ...database.orderBuilder }
 
-    // Add a new primary key to the object
+    //this is adding a new primary key, or new id property to the new order. we are storing the new id in the variable lastIndex. We subtract 1 because we are adding an order which means we have 1 in there but we want to start at zero. So when we take the customOrders last index and add 1 we will get back to one as out custom order id.
     const lastIndex = database.customOrders.length - 1
     newOrder.id = database.customOrders[lastIndex].id + 1
 
-    // Add a timestamp to the order
+    //this is generating a time stamp
     newOrder.timestamp = Date.now()
 
-    // Add the new order object to custom orders state
+    //this is pushing the new order to the custom order state we have created. That is permanent state.
     database.customOrders.push(newOrder)
 
-    // Reset the temporary state for user choices
+    //this is resetting the temporary state for user choices, which is an empty object orderBuilder and is temporary state.
     database.orderBuilder = {}
 
     // Broadcast a notification that permanent state has changed

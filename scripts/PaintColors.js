@@ -7,7 +7,6 @@ document.addEventListener(
     (event) => {
         if (event.target.name === "color") {
             setPaintColors(parseInt(event.target.value))
-            window.alert(`User chose paint color ${event.target.value}`)
         }
     }
 )

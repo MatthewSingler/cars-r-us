@@ -7,7 +7,6 @@ document.addEventListener(
     (event) => {
         if (event.target.name === "wheel") {
             setWheelOptions(parseInt(event.target.value))
-            window.alert(`User chose ${event.target.value} wheels`)
         }
     }
 )
@@ -21,7 +20,7 @@ export const WheelOptions = () => {
     const listWheelOptionsArray = wheels.map(
         (wheels) => {
             return `<li>
-            <input type = "radio" name = "interior" value = "${wheels.id}" />
+            <input type = "radio" name = "wheel" value = "${wheels.id}" />
                 </li>`
         }
     )
