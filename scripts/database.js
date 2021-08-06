@@ -80,24 +80,7 @@ export const setPaintColors = (id) => {
 export const setTechnologyPackages = (id) => {
     database.orderBuilder.technologyPackagesId = id
 }
-
-export const addCustomOrder = () => {
-    //this copies the current user choices and stores it in the newOrder variable.
-    const newOrder = { ...database.orderBuilder }
-
-    //this is adding a new primary key, or new id property to the new order. we are storing the new id in the variable lastIndex. We subtract 1 because we are adding an order which means we have 1 in there but we want to start at zero. So when we take the customOrders last index and add 1 we will get back to one as out custom order id.
-    const lastIndex = database.customOrders.length - 1
-    newOrder.id = database.customOrders[lastIndex].id + 1
-
-    //this is generating a time stamp
-    newOrder.timestamp = Date.now()
-
-    //this is pushing the new order to the custom order state we have created. That is permanent state.
-    database.customOrders.push(newOrder)
-
-    //this is resetting the temporary state for user choices, which is an empty object orderBuilder and is temporary state.
-    database.orderBuilder = {}
-
-    // Broadcast a notification that permanent state has changed
-    document.dispatchEvent(new CustomEvent("stateChanged"))
+export const setOrder = () => {
+    database.orderBuilder.orderObject
 }
+
